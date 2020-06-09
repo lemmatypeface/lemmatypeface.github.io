@@ -1,0 +1,71 @@
+<html>
+<img src="imma2.png" class="imma2">
+    <img src="imma3.png" class="imma3">
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css.css">
+
+</head>
+   
+<main class="container">
+
+
+    
+  <div contenteditable="true">
+    <h1 class="demo-text">Try me 👻</h1>
+  </div>
+  <div class="controls">
+
+    <!-- Weight Controls -->
+    <div class="slider-container">
+      <input type="range" min="0" max="100" value="0" class="slider" id="text-weight" name="text-weight" data-index="0">
+      <div class="slider-controls">
+        <label for="text-weight" class="slider-label">
+           <span class="output"></span>
+        </label>
+        
+      </div>
+    </div>
+
+
+  </div>
+
+</main>
+    
+    
+    <img src="imma4.png" class="imma3">
+    <img src="imma1.png" class="imma1">
+    <img src="Registrazione%20schermo%202020-06-08%20alle%2022.12.49.gif" class="imma6">
+    
+    <img src="imma9.png" class="imma5">
+    <img src="imma10.png" class="imma2">
+      <img src="Registrazione schermo 2020-06-08 alle 22.52.14.gif" class="imma5">
+
+    <img src="imma5.png" class="imma5">
+    <img src="imma11.png" class="imma5">
+    
+     
+    
+    
+    
+<script>
+    
+const container = document.querySelector(".container");
+const sliders = document.querySelectorAll(".slider");
+const sliderValues = document.querySelectorAll(".output");
+    
+
+
+// Update text property and displayed property value for each slider
+sliders.forEach(slider => {
+  const sliderIndex = slider.getAttribute("data-index");
+  const output = document.querySelector(`.output[data-index="${sliderIndex}"]`);
+    
+  slider.oninput = function() {
+    container.style.setProperty(`--${this.id}`, this.value);
+    output.innerHTML = this.value;
+  };
+});
+    </script>
+
+
+</html>
